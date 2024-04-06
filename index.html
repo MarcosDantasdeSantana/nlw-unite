@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>
+      dayjs.locale('pt-br')
+    </script>
+    <script>
+      dayjs.extend(window.dayjs_plugin_relativeTime)
+    </script>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img width="32" height="32" src="https://img.icons8.com/tiny-glyph/16/code.png" alt="code">
+      </header>
+
+      <hr>
+
+      <form onsubmit="addParticipant(event)">
+        <fieldset>
+          <legend class="title">Inscrição</legend>
+
+          <div>
+            <div class="wrapper">
+              <img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/person-male.png" alt="person-male">
+              <input type="text" name="name" placeholder="Nome Completo" required="">
+            </div>
+            <div class="wrapper">
+              <img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/email.png" alt="email">
+              <input type="email" name="email" placeholder="email@email.com" required="">
+            </div>
+            <button type="submit">
+              Realizar Inscrição
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <hr>
+      <section>
+        <h1 class="title">Participantes</h1>
+
+        <div>
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Participante</th>
+                <th>Data de Inscrição</th>
+                <th>Data do Check-in</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </body>
+
+</html>
